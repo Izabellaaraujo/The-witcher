@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.clouds {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/clouds.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    position: absolute;
+    overflow: hidden;
+    animation-name: Clouds;
+    animation-duration: 120s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    z-index: -100;
+}
+
+@keyframes Clouds {
+    from {
+        background-position: right;
+    }
+
+    to {
+        background-position: left;
+    }
+}
+
+
+.scenery {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/background.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    overflow: hidden;
+    z-index: 0;
+    mix-blend-mode: multiply;
+}
+
+
+
+.crow {
+    width: 164px;
+    height: 115px;
+    position: absolute;
+    top: 10%;
+    left: 3840px;
+    mix-blend-mode: multiply;
+    animation-name: crow;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.crow img {
+    width: 100%;
+    mix-blend-mode: multiply;
+}
+
+@keyframes crow {
+    from {
+        left: 3840px;
+        transform: scale(0.5);
+    }
+
+    to {
+        left: -400px;
+        transform: scale(2);
+    }
+}
+
+.fog-left,
+.fog-right {
+    height: 300px;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    background-repeat: repeat-x;
+    background-size: cover;
+}
+
+.fog-left {
+    background-image: url(../assets/fog-left.webp);
+    animation-name: fogLeft;
+    z-index: 0;
+}
+
+@keyframes fogLeft {
+    from {
+        background-position: right;
+    }
+
+    to {
+        background-position: left;
+    }
+}
+
+.fog-right {
+    background-image: url(../assets/fog-right.webp);
+    animation-name: fogRight;
+    z-index: 0;
+}
+
+@keyframes fogRight {
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+}
+
+main {
+    width: 1440px;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.left {
+    width: 720px;
+    height: 720px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.left .image {
+    width: 500px;
+    height: 600px;
+    margin-top: 20px;
+    position: relative;
+
+}
+
+#close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 20;
+    cursor: pointer;
+    transition: .1s;
+}
+
+#close:hover {
+    transform: scale(1.1);
+    transition: .1s;
+}
+
+#close img {
+    width: 100%;
+    position: relative;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.left .image img {
+    width: 100%;
+    filter: drop-shadow(0px 0px 8px #323232);
+}
+
+.left .image .cast {
+    width: 100%;
+}
+
+.left .image .cast img {
+    width: 100%;
+}
+
+.left h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: lightgray;
+    text-transform: uppercase;
+    text-shadow: inset -1px -1px 1px rgba(255, 255, 255, 0.5), inset 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.right {
+    width: 720px;
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 10px;
+
+}
+
+.right .character {
+    width: 230px;
+    height: 230px;
+    filter: saturate(0.4);
+    transition: .5s;
+    cursor: pointer;
+}
+
+.right .character img {
+    width: 100%;
+    filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.5));
+}
+
+.right .character:hover {
+    filter: saturate(1);
+    transition: .5s;
+    transform: scale(1.1);
+}

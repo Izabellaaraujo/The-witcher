@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Witcher</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/scrpit.js" defer></script>
+</head>
+
+<body>
+    <div class="clouds"></div>
+    <div class="scenery"></div>
+    <div class="crow">
+        <img src="assets/crow.webp" alt="">
+    </div>
+    <div class="fog-left"></div>
+    <div class="fog-right"></div>
+    <main>
+        <div class="left">
+            <div class="image">
+                <div class="cast">
+                    <img src="assets/the-witcher-logo.webp" alt="" id="character">
+                </div>
+                <div id="close" class="hide" onclick="logo()">
+                    <img src="assets/close.webp" alt="">
+                </div>
+            </div>
+            <h1 id="name"></h1>
+        </div>
+        <div class="right">
+            <div class="character" onclick="witcher('yennefer')">
+                <img src="assets/th-yennefer.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('cirilla')">
+                <img src="assets/th-cirilla.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('emhyr')">
+                <img src="assets/th-emhyr.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('tissaia')">
+                <img src="assets/th-tissaia.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('gerart')">
+                <img src="assets/th-gerart.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('vilgefortz')">
+                <img src="assets/th-vilgefortz.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('triss')">
+                <img src="assets/th-triss.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('jaskier')">
+                <img src="assets/th-jaskier.webp" alt="">
+            </div>
+            <div class="character" onclick="witcher('vesemir')">
+                <img src="assets/th-vesemir.webp" alt="">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
